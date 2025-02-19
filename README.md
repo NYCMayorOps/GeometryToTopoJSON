@@ -1,5 +1,5 @@
 #######################################
-### Geometry To Topo JSON Converter ###
+# Geometry To Topo JSON Converter #
 ###        By Steve Scott           ###
 #######################################
 
