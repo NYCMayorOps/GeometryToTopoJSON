@@ -3,7 +3,7 @@
 ###        By Steve Scott           ###
 #######################################
 
-# converting a geospatial file to a topojson. #
+# Converting a geospatial file to a topojson #
 ## Why convert to a TopoJSON? ##
 Most geojson files are coordinate based. A topoJSON uses a series of arcs to store its geometry. Why use TopoJSON? Because PowerBI's Shape Map visulaization component only works with TopoJSON files.
 
