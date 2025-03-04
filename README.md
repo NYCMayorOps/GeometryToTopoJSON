@@ -9,12 +9,29 @@ Most geojson files are coordinate based. A topoJSON uses a series of arcs to sto
 
 ## requirements ###
 ```bash
-pip install requirements.txt
+#always create a virtual environment to install requirements into
+python -m venv venv
 ```
-To use:
+for Windows: 
+```bash
+venv\Scripts\activate
+```
+or for Unix
+```bash
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
+
+
+To install requirements in a conda environment:
+```bash
+conda env create -f environment.yml
+conda activate topojson-env
+```
+## To use the Script: ##
 ```powershell
-python \Path\To\repo\convert_to_topo.py \path\of\file\to\convert\<filename>.geojson
+python \Path\To\repo\convert_to_topo.py \path\of\file\to\convert\<filename>.<file extension>
 ```
 
 This will generate a file named <filename>_topojson.json
