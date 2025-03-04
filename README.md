@@ -9,10 +9,7 @@ Most geojson files are coordinate based. A topoJSON uses a series of arcs to sto
 
 ## requirements ###
 ```bash
-pip install geopandas==1.0.1
-pip install topojson
-pip install geojson
-pip install pytest
+pip install requirements.txt
 ```
 To use:
 
