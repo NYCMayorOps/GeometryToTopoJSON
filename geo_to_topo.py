@@ -6,17 +6,25 @@ import argparse
 from pathlib import Path
 
 def main(input_file : str, precision : float, string_cols : list[str]):
+    """
+	input_file: any  geospatial file readable by geopandas.
+	precision (optional): the precision of the final map in degrees. This will simplify the geometry and compress it.
+    string_cols: columns to cast as string so they don't become floats. Will throw warnings and may not work.
+	"""	
     if string_cols is not None:
         gdf = gpd.read_file(input_file, dtypes = {col: 'str' for col in string_cols if string_cols is not None})
     else:
         gdf = gpd.read_file(input_file)
     if precision != 0:
-        gdf['geometry'] = gdf.simplify(0.0001)
+        gdf['geometry'] = gdf.simplify(precision)
     else :
         gdf['geometry'] = gdf.geometry
 
     gdf.info()
+    #convert GeoDataFrame to GeoJson
     this_json = gdf.to_json()
+
+    #convert GeoJSON to TopoJSON
     topo = tp.Topology(this_json)
     
     path = Path(input_file)
