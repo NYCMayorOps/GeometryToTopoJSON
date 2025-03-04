@@ -1,8 +1,10 @@
 name: topojson-env
 dependencies:
-  - pytest=5.3.5
+  - python=3.12
+  - pytest
   - pip
   - pip:
+    - geopandas==1.0.1
     - topojson==1.9
     - geojson==3.2.0
     - pytest==5.3.5
