@@ -34,7 +34,7 @@ conda activate topojson-env
 python \Path\To\repo\convert_to_topo.py \path\of\file\to\convert\<filename>.<file extension>
 ```
 
-This will generate a file named <filename>_topojson.json
+This will generate a file named <filename>_topojson.json in the same directory next to the file <filename>.<file extension>
 
 arguments:
 ###``` '--input_geo_file' ```###
