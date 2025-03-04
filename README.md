@@ -8,27 +8,15 @@
 Most geojson files are coordinate based. A topoJSON uses a series of arcs to store its geometry. Why use TopoJSON? Because PowerBI's Shape Map visulaization component only works with TopoJSON files.
 
 ## requirements ###
-```bash
-#always create a virtual environment to install requirements into
-python -m venv venv
-```
-for Windows: 
-```bash
-venv\Scripts\activate
-```
-or for Unix
-```bash
-source venv/bin/activate
-pip install -r requirements.txt
-```
 
-
+always create a virtual environment to install requirements into
 
 To install requirements in a conda environment:
 ```bash
 conda env create -f environment.yml
 conda activate topojson-env
 ```
+
 ## To use the Script: ##
 ```powershell
 python \Path\To\repo\convert_to_topo.py \path\of\file\to\convert\<filename>.<file extension>
